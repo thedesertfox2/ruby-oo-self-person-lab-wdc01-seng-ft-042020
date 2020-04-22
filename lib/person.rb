@@ -50,8 +50,21 @@ class Person
     end
 
     def take_bath()
-        @hygiene += 4
+        self.hygiene += 4
         return "♪ Rub-a-dub just relaxing in the tub ♫"
+    end
+
+    def work_out
+        self.hygiene -= 3
+        self.happiness += 2
+        return "♪ another one bites the dust ♫"
+    end
+
+    def call_friend(friend)
+        self.happiness += 3
+        friend.happiness += 3
+        return "Hi #{friend.name}! It's #{self.name}. How are you?" 
+        
     end
 
 end
